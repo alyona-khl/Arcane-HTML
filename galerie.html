@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcane</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(28, 53, 154);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .navbar {
+            background-color: black;
+        }
+
+        .menu {
+            list-style-type: none;
+            justify-content: center;
+            display: flex;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu > li {
+            position: relative;
+        }
+
+        .menu > li > a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+        }
+
+        .menu > li > a:hover {
+            background-color: grey;
+        }
+
+        .dropdown {
+            display: none;
+            background-color: white;
+            list-style-type: none;
+            position: absolute;
+            padding: 0;
+            margin: 0;
+        }
+
+        .dropdown li a {
+            color: black;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+        }
+
+        .dropdown li a:hover {
+            background-color: grey;
+        }
+
+        .menu > li:hover .dropdown {
+            display: block;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: white;
+        }
+
+        h2.section-title {
+            text-decoration: underline;
+            text-decoration-color: goldenrod;
+            margin-top: 30px;
+        }
+
+        .galerie-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px;
+        }
+        
+
+        .img-box img {
+    width: 100%;
+    height: 400px;
+    object-fit: contain; 
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s;
+}
+        .img-box img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s;
+        }
+
+        .img-box img:hover {
+            transform: scale(1.05);
+        }
+        
+
+        #buton_sus {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: rgba(242, 242, 77, 0.5);
+            color: white;
+            cursor: pointer;
+            padding: 10px 15px;
+            border-radius: 10px;
+            font-size: 18px;
+            box-shadow: 0 0 10px rgba(242, 242, 77, 0.5);
+        }
+
+        #buton_sus:hover {
+            background-color: rgb(232, 193, 93);
+        }
+
+        footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            text-align: center;
+            padding: 15px;
+            color: black;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div style="background-color: white; padding: 20px;">
+        <h1 style="color: black;">Arcane</h1>
+    </div>
+
+    <nav class="navbar">
+        <ul class="menu">
+            <li><a href="acasa.html">Acasa</a></li>
+            <li>
+                <a>Despre personaje</a>
+                <ul class="dropdown">
+                    <li><a href="caitlyn.html">Caitlyn Kiramann</a></li>
+                    <li><a href="vi.html">Violet(Vi)</a></li>
+                    <li><a href="mel.html">Mel Medarda</a></li>
+                    <li><a href="jayce.html">Jayce Talis</a></li>
+                    <li><a href="vander.html">Vander</a></li>
+                    <li><a href="jinx.html">Jinx (Powder)</a></li>
+                    <li><a href="sevika.html">Sevika</a></li>
+                    <li><a href="viktor.html">Viktor</a></li>
+                    <li><a href="silco.html">Silco</a></li>
+                    <li><a href="ambessa.html">Ambessa Medarda</a></li>
+                    <li><a href="ekko.html">Ekko</a></li>
+                </ul>
+            </li>
+            <li><a href="hextech.html">Despre HEXTECH</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+        </ul>
+    </nav>
+
+    <h2 class="section-title">GALERIE</h2>
+
+    <div class="galerie-container">
+        <!-- Exemplu imagine -->
+        <div class="img-box">
+            <h2>Viktor-Herald of the Arcane</h2>
+            <img src="https://wiki.leagueoflegends.com/en-us/images/Viktor_Arcane_10_Render.png?8be6b" alt="Viktor">
+        </div>
+
+        
+        <div class="img-box">
+            <h2>Viktor-forma astrală</h2>
+            <img src="https://wiki.leagueoflegends.com/en-us/images/Viktor_Arcane_11_Render.png?9f8f2">
+        </div>
+        <div class="img-box">
+            <h2>Isha</h2>
+            <img src="https://wiki.leagueoflegends.com/en-us/images/Isha_Arcane_2.png?2d87f">
+        </div>
+        <div class="img-box">
+            <h2>Powder-Universul alternativ</h2>
+            <img src="https://wiki.leagueoflegends.com/en-us/images/Jinx_Arcane_7_Render.png?e990a">
+        </div>
+        <div class="img-box">
+            <h2>Caitlyn-final sezon 2</h2>
+            <img src="https://wiki.leagueoflegends.com/en-us/images/Caitlyn_Arcane_14_Render.png?de31b">
+        </div>
+        <div class="img-box">
+            <h2>Jayce-Plan astral</h2>
+            <img src="https://wiki.leagueoflegends.com/en-us/images/Jayce_Arcane_10_Render.png?1fe74">
+        </div>
+        <div class="img-box">
+            <h2>Jayce-înainte de război</h2>
+            <img src="https://wiki.leagueoflegends.com/en-us/images/Jayce_Arcane_11_Render.png?175c5">
+        </div>
+        <div class="img-box">
+            <h2>Heimerdinger</h2>
+            <img src="https://wiki.leagueoflegends.com/en-us/images/Heimerdinger_Arcane_1_Render.png?7d57a">
+        </div>
+        <div class="img-box">
+            <h2>Mel vs Black Rose</h2>
+            <img src="https://wiki.leagueoflegends.com/en-us/images/Mel_Arcane_7_Render.png?7ba55">
+        </div>
+        <div class="img-box">
+            <h2>Mel (mage)</h2>
+            <img src="https://wiki.leagueoflegends.com/en-us/images/Mel_Arcane_8_Render.png?3424c">
+        </div>
+        <div class="img-box">
+            <h2>Warwick (Vander)</h2>
+            <img src="https://static.wikia.nocookie.net/arcane/images/f/f4/Warwick.png/revision/latest?cb=20250110183722">
+        </div>
+        <div class="img-box">
+            <h2>Ambessa-Război</h2>
+            <img src="https://wiki.leagueoflegends.com/en-us/images/Ambessa_Arcane_4_Render.png?75834">
+        </div>
+        <div class="img-box">
+            <h2>Elora-Asistenta și prietena lui Mel</h2>
+            <img src="https://wiki.leagueoflegends.com/en-us/images/Elora_Arcane_2_Render.png?6a78b">
+        </div>
+        <div class="img-box">
+            <h2>Lest</h2>
+            <img src="https://wiki.leagueoflegends.com/en-us/images/Lest_Render.jpg?c2c25">
+        </div>
+        <div class="img-box">
+            <h2>LeBlanc-Black Rose</h2>
+            <img src="https://wiki.leagueoflegends.com/en-us/images/LeBlanc_Arcane_Render.png?155af">
+        </div>
+        <div class="img-box">
+            <h2>LeBlanc-în joc</h2>
+            <img src="https://wiki.leagueoflegends.com/en-us/images/LeBlanc_Welcome_to_Noxus_Render.png?2608a">
+        </div>
+        <div class="img-box">
+            <h2>Piltover</h2>
+            <img src="https://static.wikia.nocookie.net/arcane/images/7/7a/Piltover_Season_1_Episode_4_001.png/revision/latest/scale-to-width-down/1000?cb=20211206231717">
+        </div>
+        <div class="img-box">
+            <h2>Zaun</h2>
+            <img src="https://static.wikia.nocookie.net/arcane/images/4/4e/Vi_in_Zaun_Season_1_Episode_5_001.png/revision/latest/scale-to-width-down/1000?cb=20211124042214">
+        </div>
+        <div class="img-box">
+            <h2>Universul alternativ</h2>
+            <img src="https://static.wikia.nocookie.net/arcane/images/a/a4/273.jpeg/revision/latest/scale-to-width-down/1000?cb=20241129004638">
+        </div>
+        <div class="img-box">
+            <h2>Ambessa & Caitlyn</h2>
+            <img src="https://static.wikia.nocookie.net/arcane/images/2/29/2318.png/revision/latest/scale-to-width-down/1000?cb=20250107132500">
+        </div>
+        <div class="img-box">
+            <h2>Consiliul</h2>
+            <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/10/arcane-piltover-council.jpg?q=70&fit=crop&w=1140&h=&dpr=1">
+        </div>
+        <div class="img-box">
+            <h2>Sevika-sezon 1</h2>
+            <img src="https://static.wikia.nocookie.net/leagueoflegends/images/9/9a/Sevika_Arcane_5_Render.png/revision/latest?cb=20220215082322">
+        </div>
+        <div class="img-box">
+            <h2>Sevika-sezon 2</h2>
+            <img src="https://i.pinimg.com/736x/de/cd/b2/decdb20be415a4e1db3c5738d841c279.jpg">
+        </div>
+        <div class="img-box">
+            <h2>Ekko-Univers alternativ</h2>
+            <img src="https://wiki.leagueoflegends.com/en-us/images/Ekko_Arcane_6_Render.png?50fc0">
+        </div>
+        <div class="img-box">
+            <h2>Powder&Ekko-Univers alternativ</h2>
+            <img src="https://i.ytimg.com/vi/-EgRa4EsFUo/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD_8WvvH-4Q23BvnDh9shX8iMmuwA">
+        </div>
+       
+        <div class="img-box">
+            <h2>Caitlyn&Vi</h2>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPXOJqf2t9Icgyq2NAX6PDHnchMtvGWu9sfg&s">
+        </div>
+        <div class="img-box">
+            <h2>Mel&Jayce</h2>
+            <img src="https://www.lolvvv.com/_next/image?url=https%3A%2F%2Fwww.lolvvv.com%2Fwp-content%2Fuploads%2F2023%2F05%2Farcane-mel-jayce.jpg&w=1200&q=75">
+        </div>
+        <div class="img-box">
+            <h2>Viktor&Jayce</h2>
+            <img src="https://i.pinimg.com/736x/9c/33/23/9c332325ccbc51f44a0f94e49dae475e.jpg">
+        </div>
+        <div class="img-box">
+            <h2>Jinx&Silco</h2>
+            <img src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2021/11/silco-and-jinx-league-of-legends-arcane.jpg">
+        </div>
+        <div class="img-box">
+            <h2>Hexcore</h2>
+            <img src="https://static.wikia.nocookie.net/arcane/images/7/70/Viktors-Hexcore.webp/revision/latest?cb=20241127103710">
+        </div>
+        <div class="img-box">
+            <h2>Hextech</h2>
+            <img src="https://static.wikia.nocookie.net/leagueoflegends/images/f/f6/Piltover_Hextech.jpg/revision/latest/scale-to-width-down/1200?cb=20180902020253">
+        </div>
+        <div class="img-box">
+            <h2>Camera Consiliului</h2>
+            <img src="https://preview.redd.it/ffw22hz2mvv81.png?width=1920&format=png&auto=webp&s=770161c8182a0acbdab32553b98ea71b5bb6fa2b">
+        </div>
+        <div class="img-box">
+            <h2>Creaturile lui Viktor</h2>
+            <img src="https://preview.redd.it/s2-spoilers-viktors-creature-v0-33umyeatbp4e1.jpeg?auto=webp&s=d83b96397dc9d20298dc208767553bc2469d8110">
+        </div>
+        </div>
+
+    <button onclick="topFunction()" id="buton_sus" title="inapoi sus">↑</button>
+
+    <footer>
+        <p>Anul I<br>Ioana Iordache<br>FSM-MI</p>
+    </footer>
+
+    <script>
+        let btn = document.getElementById("buton_sus");
+        window.onscroll = function () {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+</body>
+</html>
